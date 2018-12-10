@@ -1,0 +1,30 @@
+
+https://dbdiagram.io/d
+Table Inventory{
+  itemid INTEGER PK
+  name VARCHAR
+  price DOUBLE
+  discount DOUBLE
+  
+}
+  
+
+Table User{
+  userid INTEGER PK
+  username VARCHAR
+  password VARCHAR
+  role VARCHAR
+  
+}
+
+Table Cart{
+  cartid INTEGER PK
+  itemid INTEGER
+  userid INTEGER
+  quantity INTEGER
+  }
+
+
+Ref: Cart.itemid > Inventory.itemid 
+
+Ref: User.userid > Cart.userid
